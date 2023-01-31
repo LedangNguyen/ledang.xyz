@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint:js": "eslint --ext \".js,.ts,.vue\" .",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.3.0",
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@types/node": "^18.11.18",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "nuxt": "^3.1.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "typescript": "~4.7.4"
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^5.0.2"
+  }
+}
