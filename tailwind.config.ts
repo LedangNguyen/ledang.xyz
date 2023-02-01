@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
+
 export default <Partial<Config>>{
+  content: ["./storyblok/**/*.vue"],
   theme: {
     container: {
       center: true,
@@ -12,6 +14,9 @@ export default <Partial<Config>>{
       lg: "1200px",
     },
     extend: {},
+    fontFamily: {
+      inter: ["Inter", "sans-serif"],
+    },
   },
   plugins: [],
 };
