@@ -9,7 +9,6 @@ export default defineNuxtConfig({
   image: {
     storyblok: {
       baseURL: "https://a.storyblok.com",
-      formats: ["webp", "avif"],
     },
   },
   app: {

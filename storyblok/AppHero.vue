@@ -22,14 +22,14 @@ const heroText = computed(() => renderRichText(props.blok.text));
       <div class="mb-5 flex items-center gap-5 sm:mb-8 sm:gap-8">
         <div v-if="blok.photo" class="shrink-0">
           <nuxt-img
-            class="h-[90px] w-[90px] rounded-full border-[5px] border-solid border-white/90 object-cover sm:h-[105px] sm:w-[105px]"
+            class="h-[90px] w-[90px] rounded-full border-[5px] border-solid border-white/90 sm:h-[105px] sm:w-[105px]"
             :src="blok.photo.filename"
-            format="webp"
-            width="105"
-            height="105"
+            width="190"
+            height="190"
             provider="storyblok"
             :modifiers="{ smart: true }"
             :alt="blok.photo.alt"
+            :placeholder="21"
           />
         </div>
         <div>
