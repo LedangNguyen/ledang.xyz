@@ -34,12 +34,12 @@ function distanceBetweenDates(start: string, end: string, now: boolean) {
   <article class="relative text-white/90" v-editable="blok">
     <h3 class="text-2xl font-medium">{{ blok.title }}</h3>
     <p class="mb-2 text-lg">{{ blok.subtitle }}</p>
-    <p class="mb-2 text-white/70">
+    <p class="mb-2.5 text-white/70">
       {{ formatDate(blok.start_date, false) }} - {{ formatDate(blok.end_date, blok.end_date_present) }} ({{
         distanceBetweenDates(blok.start_date, blok.end_date, blok.end_date_present)
       }})
     </p>
-    <div v-html="description(blok)"></div>
+    <div class="leading-relaxed" v-html="description(blok)"></div>
     <span
       class="absolute left-[-49px] top-[10px] block h-4 w-4 rounded-full border-2 border-solid border-white bg-white"
       :class="{ last: $attrs.last }"
