@@ -40,4 +40,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    public: {
+      storyblokVersion: process.env.STORYBLOK_VERSION,
+    },
+  },
 });

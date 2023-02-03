@@ -1,6 +1,8 @@
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
+
 const story = await useAsyncStoryblok("home", {
-  version: "draft",
+  version: runtimeConfig.public.storyblokVersion,
 });
 </script>
 
