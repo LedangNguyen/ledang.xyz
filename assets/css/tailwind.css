@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   @apply selection:bg-white/90 selection:text-slate-800;
 }

@@ -1,11 +1,15 @@
 <script setup lang="ts">
-defineProps({
-  blok: Object,
-});
+import { SbBlokData } from "@storyblok/js";
+
+defineProps<{
+  blok: {
+    body: SbBlokData[];
+  };
+}>();
 </script>
 
 <template>
   <div>
-    <StoryblokComponent v-if="blok" v-for="blok in blok.body" :key="blok._uid" :blok="blok" />
+    <StoryblokComponent v-if="blok" v-for="component in blok.body" :key="component._uid" :blok="component" />
   </div>
 </template>

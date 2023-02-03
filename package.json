@@ -27,6 +27,7 @@
     "typescript": "~4.7.4"
   },
   "dependencies": {
-    "@storyblok/nuxt": "^5.0.2"
+    "@storyblok/nuxt": "^5.0.2",
+    "@vueuse/core": "^9.12.0"
   }
 }

@@ -1,17 +1,18 @@
 <template>
-  <header class="sticky top-0 py-5 backdrop-blur-lg">
+  <header class="sticky top-0 z-10 py-5 backdrop-blur-lg">
     <div class="container flex max-w-screen-sm items-center justify-between">
       <p>
         <a class="font-inter text-2xl font-semibold text-white" href="/">Le Dang Nguyen</a>
       </p>
       <nav class="flex gap-5">
-        <a class="text-white/90" href="/#projects">Projects</a>
-        <a class="text-white/90" href="/#path">Path</a>
-        <a class="text-white/90" href="/#contact">Contact</a>
+        <a class="text-white/90" href="/#path" title="My career path">Path</a>
+        <a class="text-white/90" href="/#projects" title="Some of my projects">Projects</a>
+        <a class="text-white/90" href="/#contact" title="Get in touch with me">Contact</a>
         <a
           class="flex items-center gap-1 text-white/90"
           target="_blank"
           href="https://github.com/LedangNguyen/ledang.xyz"
+          title="View source code on GitHub"
           ><svg
             stroke="currentColor"
             fill="currentColor"
