@@ -13,8 +13,15 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       title: "Le Dang Nguyen | Expertise in WordPress, Vue.js, Nuxt.js, Laravel",
       link: [
+        {
+          rel: "canonical",
+          href: "https://ledang.xyz",
+        },
         {
           rel: "preconnect",
           href: "https://fonts.googleapis.com",
@@ -25,7 +32,7 @@ export default defineNuxtConfig({
           crossorigin: "",
         },
         {
-          href: "https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap",
           rel: "stylesheet",
         },
       ],
