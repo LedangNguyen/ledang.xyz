@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      title: "Le Dang Nguyen | Expertise in WordPress, Vue.js, Nuxt.js, Laravel",
       link: [
         {
           rel: "preconnect",
@@ -29,6 +30,11 @@ export default defineNuxtConfig({
         },
       ],
       meta: [
+        {
+          name: "description",
+          content:
+            "Meet Le Dang Nguyen, a highly skilled Full Stack Developer with over seven years of development experience. Expertise in WordPress, Vue.js, Nuxt.js, and Laravel. A responsible and passionate professional ready to tackle challenging projects and contribute to team success.",
+        },
         {
           property: "og:image",
           content: "/ledang.jpg",
