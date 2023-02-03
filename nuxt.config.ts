@@ -29,6 +29,16 @@ export default defineNuxtConfig({
           rel: "stylesheet",
         },
       ],
+      meta: [
+        {
+          property: "og:image",
+          content: "/ledang.jpg",
+        },
+        {
+          property: "twitter:image",
+          content: "/ledang.jpg",
+        },
+      ],
     },
   },
 });

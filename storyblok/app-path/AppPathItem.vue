@@ -41,7 +41,7 @@ function distanceBetweenDates(start: string, end: string, now: boolean) {
     </p>
     <div class="leading-relaxed" v-html="description(blok)"></div>
     <span
-      class="absolute left-[-49px] top-[10px] block h-4 w-4 rounded-full border-2 border-solid border-white bg-white"
+      class="absolute left-[-48px] top-[10px] block h-[15px] w-[15px] rounded-full border-2 border-solid border-white bg-white"
       :class="{ last: $attrs.last }"
     ></span>
   </article>
