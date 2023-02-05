@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
     "@nuxt/image-edge",
+    "@nuxtjs/html-validator",
   ],
   image: {
     storyblok: {
@@ -29,7 +30,6 @@ export default defineNuxtConfig({
         {
           rel: "preconnect",
           href: "https://fonts.gstatic.com",
-          crossorigin: "",
         },
         {
           href: "https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap",

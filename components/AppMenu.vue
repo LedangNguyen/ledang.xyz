@@ -11,7 +11,7 @@ function toggleMenu() {
 </script>
 
 <template>
-  <button class="min-[600px]:hidden" @click="toggleMenu">
+  <button class="min-[600px]:hidden" @click="toggleMenu" type="button">
     <span class="sr-only">Open Menu</span>
     <span class="group flex h-12 w-12 flex-col items-center justify-center rounded border-2 border-white/90">
       <span

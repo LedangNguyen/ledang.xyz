@@ -17,7 +17,7 @@ const heroText = computed(() => renderRichText(props.blok.text));
 </script>
 
 <template>
-  <section class="py-10 sm:py-20" v-editable="blok">
+  <section class="pt-10 pb-16 sm:py-20" v-editable="blok">
     <div class="container max-w-[640px] text-white/90">
       <div class="mb-5 flex items-center gap-5 sm:mb-8 sm:gap-8">
         <div v-if="blok.photo" class="shrink-0">
