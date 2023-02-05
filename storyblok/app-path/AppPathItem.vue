@@ -11,7 +11,7 @@ function description(blok: AppPathItem) {
 }
 
 function formatDate(date: string, now: boolean) {
-  return now ? "Present" : useDateFormat(date, "YYYY MMM").value;
+  return now ? "Today" : useDateFormat(date, "YYYY MMM").value;
 }
 
 function distanceBetweenDates(start: string, end: string, now: boolean) {
