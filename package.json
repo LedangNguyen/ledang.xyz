@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@storyblok/nuxt": "^5.0.2",
+    "@vercel/analytics": "^0.1.8",
     "@vueuse/core": "^9.12.0"
   }
 }

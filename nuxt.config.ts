@@ -58,4 +58,5 @@ export default defineNuxtConfig({
       storyblokVersion: process.env.STORYBLOK_VERSION,
     },
   },
+  plugins: ["~/plugins/vercel.client.ts"],
 });
