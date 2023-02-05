@@ -12,6 +12,7 @@ function toggleMenu() {
 
 <template>
   <button class="min-[600px]:hidden" @click="toggleMenu">
+    <span class="sr-only">Open Menu</span>
     <span class="group flex h-12 w-12 flex-col items-center justify-center rounded border-2 border-white/90">
       <span
         class="ease my-1 h-0.5 w-6 transform rounded-full bg-white/90 transition duration-300"
