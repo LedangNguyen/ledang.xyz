@@ -16,7 +16,7 @@ const lastItem = computed(() => props.blok.items[props.blok.items.length - 1]);
     <div class="container max-w-[640px]">
       <h2 class="font-inter mb-8 text-2xl font-semibold text-white/90 sm:text-3xl">{{ blok.heading }}</h2>
       <div
-        class="relative grid gap-8 pl-10 after:absolute after:top-2.5 after:left-0 after:h-[calc(100%-10px)] after:border-l after:border-dashed after:border-white/50"
+        class="relative grid gap-8 pl-10 after:absolute after:top-2.5 after:right-full after:isolate after:z-[-1] after:h-[calc(100%-10px)] after:border-l after:border-dashed after:border-white/50"
       >
         <StoryblokComponent
           v-if="blok.items"
