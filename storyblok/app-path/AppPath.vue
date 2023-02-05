@@ -15,7 +15,9 @@ const lastItem = computed(() => props.blok.items[props.blok.items.length - 1]);
   <section class="pb-10 sm:pb-20" v-editable="blok">
     <div class="container max-w-[640px]">
       <h2 class="font-inter mb-8 text-2xl font-semibold text-white/90 sm:text-3xl">{{ blok.heading }}</h2>
-      <div class="grid gap-8 border-l border-dashed border-white/50 pl-10">
+      <div
+        class="relative grid gap-8 pl-10 after:absolute after:top-2.5 after:left-0 after:h-[calc(100%-10px)] after:border-l after:border-dashed after:border-white/50"
+      >
         <StoryblokComponent
           v-if="blok.items"
           v-for="item in blok.items"
