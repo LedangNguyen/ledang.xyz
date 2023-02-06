@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const isMenuOpen = ref(false);
-function toggleMenu(isOpen: boolean) {
-  isMenuOpen.value = isOpen;
-}
+const isMenuOpen = useMenu();
 </script>
 
 <template>
@@ -14,7 +11,7 @@ function toggleMenu(isOpen: boolean) {
       <p>
         <a class="font-inter text-2xl font-semibold text-white" href="/">Le Dang Nguyen</a>
       </p>
-      <AppMenu @toggle-menu="toggleMenu" />
+      <AppMenu />
     </div>
   </header>
 </template>

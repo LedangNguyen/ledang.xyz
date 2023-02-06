@@ -1,12 +1,15 @@
 <script setup lang="ts">
-const isMenuOpen = ref(false);
+const isMenuOpen = useMenu();
+const scrollSection = useScrollSection();
 
-const emit = defineEmits<{
-  (e: "toggle-menu", isOpen: boolean): void;
-}>();
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
-  emit("toggle-menu", isMenuOpen.value);
+}
+
+function scrollToSection(id: string) {
+  scrollSection.value = id;
+
+  isMenuOpen.value = false;
 }
 </script>
 
@@ -16,15 +19,15 @@ function toggleMenu() {
     <span class="group flex h-12 w-12 flex-col items-center justify-center rounded border-2 border-white/90">
       <span
         class="ease my-1 h-0.5 w-6 transform rounded-full bg-white/90 transition duration-300"
-        :class="[isMenuOpen ? 'translate-y-3 rotate-45  ' : ' ']"
+        :class="[isMenuOpen ? 'translate-y-3 rotate-45  ' : '']"
       ></span>
       <span
         class="ease h-0.5 w-6 transform rounded-full bg-white/90 transition duration-300"
-        :class="[isMenuOpen ? 'my-1.5 opacity-0' : 'my-1  ']"
+        :class="[isMenuOpen ? 'my-1.5 opacity-0' : 'my-1']"
       ></span>
       <span
         class="ease my-1 h-0.5 w-6 transform rounded-full bg-white/90 transition duration-300"
-        :class="[isMenuOpen ? '-translate-y-3 -rotate-45 ' : ' ']"
+        :class="[isMenuOpen ? '-translate-y-3 -rotate-45 ' : '']"
       ></span>
     </span>
   </button>
@@ -34,9 +37,30 @@ function toggleMenu() {
       'translate-x-full': isMenuOpen,
     }"
   >
-    <a class="text-2xl text-white/90 min-[600px]:text-base" href="/#path" title="My career path">Path</a>
-    <a class="text-2xl text-white/90 min-[600px]:text-base" href="/#projects" title="Some of my projects">Projects</a>
-    <a class="text-2xl text-white/90 min-[600px]:text-base" href="/#contact" title="Get in touch with me">Contact</a>
+    <button
+      @click="scrollToSection('app-path')"
+      class="text-2xl text-white/90 min-[600px]:text-base"
+      type="button"
+      title="My career path"
+    >
+      Path
+    </button>
+    <button
+      @click="scrollToSection('app-projects')"
+      class="text-2xl text-white/90 min-[600px]:text-base"
+      type="button"
+      title="Some of my projects"
+    >
+      Projects
+    </button>
+    <button
+      @click="scrollToSection('app-contact')"
+      class="text-2xl text-white/90 min-[600px]:text-base"
+      type="button"
+      title="Get in touch with me"
+    >
+      Contact
+    </button>
     <a
       class="flex items-center gap-1 text-2xl text-white/90 min-[600px]:text-base"
       target="_blank"
