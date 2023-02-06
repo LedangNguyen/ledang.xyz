@@ -7,6 +7,7 @@ interface AppProjectsItem {
     target: string;
     url: string;
   };
+  short_description: string;
   description: ISbRichtext;
 
   techs: string[];

@@ -29,10 +29,10 @@ const formattedLink = computed(() => {
 </script>
 
 <template>
-  <article class="relative overflow-hidden rounded-lg border border-solid border-white/90 shadow-lg" v-editable="blok">
+  <article class="relative" v-editable="blok">
     <div>
       <nuxt-img
-        class="w-full"
+        class="w-full rounded-lg shadow-lg"
         width="580"
         height="435"
         :src="blok.image.filename"
@@ -41,12 +41,10 @@ const formattedLink = computed(() => {
         :placeholder="[20, 15, 25]"
       />
     </div>
-    <div class="px-4 pt-3 pb-4">
-      <p class="mb-4 text-xl font-semibold leading-none text-white/90">{{ blok.title }}</p>
+    <div class="pt-3 pt-4">
+      <p class="mb-2 text-xl font-semibold leading-none text-white/90">{{ blok.title }}</p>
       <div class="flex flex-wrap gap-2">
-        <p class="rounded-md bg-white/90 py-0.5 px-1 text-sm text-slate-900" v-for="tech in blok.techs" :key="tech">
-          {{ tech }}
-        </p>
+        <p class="text-sm text-white/90">{{ blok.short_description }}</p>
       </div>
     </div>
     <button class="absolute inset-0 cursor-pointer" @click="openModal" type="button">
@@ -55,10 +53,10 @@ const formattedLink = computed(() => {
   </article>
 
   <AppModal :is-modal-open="isModalOpen" :close-modal="closeModal">
-    <div class="overflow-hidden rounded-xl border border-solid border-white/90 bg-slate-900">
+    <div class="rounded-xl bg-slate-900 shadow-lg">
       <div class="aspect-w-4 aspect-h-3">
         <nuxt-img
-          class="w-full"
+          class="w-full rounded-xl"
           width="1532"
           height="1148"
           :src="blok.image.filename"

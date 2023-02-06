@@ -13,11 +13,7 @@ onClickOutside(modal, props.closeModal);
 const isOpen = computed(() => props.isModalOpen);
 
 watch(isOpen, (isOpen) => {
-  if (isOpen) {
-    document.body.classList.add("overflow-hidden");
-  } else {
-    document.body.classList.remove("overflow-hidden");
-  }
+  document.body.classList.toggle("overflow-hidden", isOpen);
 });
 </script>
 

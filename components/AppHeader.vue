@@ -9,7 +9,9 @@ const isMenuOpen = useMenu();
   >
     <div class="container flex max-w-screen-sm items-center justify-between">
       <p>
-        <a class="font-inter text-2xl font-semibold text-white" href="/">Le Dang Nguyen</a>
+        <a class="font-inter text-2xl font-semibold text-white transition-colors duration-300 hover:text-white" href="/"
+          >Le Dang Nguyen</a
+        >
       </p>
       <AppMenu />
     </div>
