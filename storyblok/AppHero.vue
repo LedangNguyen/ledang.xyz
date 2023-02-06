@@ -29,7 +29,7 @@ const heroText = computed(() => renderRichText(props.blok.text));
             provider="storyblok"
             :modifiers="{ smart: true }"
             :alt="blok.photo.alt"
-            :placeholder="21"
+            :placeholder="[20, 20, 25]"
           />
         </div>
         <div>

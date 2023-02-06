@@ -2,13 +2,13 @@
 import { useDateFormat } from "@vueuse/core";
 import { AppPathItem } from "~/storyblok/app-path/types";
 
-defineProps<{
+const props = defineProps<{
   blok: AppPathItem;
 }>();
 
-function description(blok: AppPathItem) {
-  return renderRichText(blok.description);
-}
+const description = computed(() => {
+  return renderRichText(props.blok.description);
+});
 
 function formatDate(date: string, now: boolean) {
   return now ? "Today" : useDateFormat(date, "YYYY MMM").value;
@@ -39,7 +39,7 @@ function distanceBetweenDates(start: string, end: string, now: boolean) {
         distanceBetweenDates(blok.start_date, blok.end_date, blok.end_date_present)
       }})
     </p>
-    <div class="leading-relaxed" v-html="description(blok)"></div>
+    <div class="leading-relaxed" v-html="description"></div>
     <span
       class="absolute left-[-48px] top-[10px] block h-[15px] w-[15px] rounded-full border-2 border-solid border-white bg-white"
       :class="{ last: $attrs.last }"

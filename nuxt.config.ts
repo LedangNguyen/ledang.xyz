@@ -7,9 +7,10 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/html-validator",
   ],
-  image: {
-    storyblok: {
-      baseURL: "https://a.storyblok.com",
+  plugins: ["~/plugins/vercel.client.ts"],
+  runtimeConfig: {
+    public: {
+      storyblokVersion: process.env.STORYBLOK_VERSION,
     },
   },
   app: {
@@ -53,10 +54,12 @@ export default defineNuxtConfig({
       ],
     },
   },
-  runtimeConfig: {
-    public: {
-      storyblokVersion: process.env.STORYBLOK_VERSION,
+  image: {
+    storyblok: {
+      baseURL: "https://a.storyblok.com",
     },
   },
-  plugins: ["~/plugins/vercel.client.ts"],
+  htmlValidator: {
+    logLevel: "warning",
+  },
 });

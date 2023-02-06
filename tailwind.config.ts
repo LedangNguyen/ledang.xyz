@@ -18,5 +18,8 @@ export default <Partial<Config>>{
       inter: ["Inter", "sans-serif"],
     },
   },
-  plugins: [],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [require("@tailwindcss/aspect-ratio"), require("tailwind-scrollbar-hide")],
 };

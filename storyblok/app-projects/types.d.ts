@@ -2,7 +2,11 @@ import { ISbRichtext } from "storyblok-js-client";
 
 interface AppProjectsItem {
   title: string;
-  url: string;
+  url: {
+    rel: string;
+    target: string;
+    url: string;
+  };
   description: ISbRichtext;
 
   techs: string[];
