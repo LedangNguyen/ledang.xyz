@@ -42,10 +42,8 @@ const formattedLink = computed(() => {
       />
     </div>
     <div class="pt-3 pt-4">
-      <p class="mb-2 text-xl font-semibold leading-none text-white/90">{{ blok.title }}</p>
-      <div class="flex flex-wrap gap-2">
-        <p class="text-sm text-white/90">{{ blok.short_description }}</p>
-      </div>
+      <p class="mb-1 text-2xl font-semibold leading-none text-white/90">{{ blok.title }}</p>
+      <p class="text-white/90">{{ blok.short_description }}</p>
     </div>
     <button class="absolute inset-0 cursor-pointer" @click="openModal" type="button">
       <span class="sr-only">Learn more about {{ blok.title }} project</span>
