@@ -29,10 +29,10 @@ const formattedLink = computed(() => {
 </script>
 
 <template>
-  <article class="relative" v-editable="blok">
+  <article class="group relative" v-editable="blok">
     <div>
       <nuxt-img
-        class="w-full rounded-lg shadow-lg"
+        class="w-full rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
         width="580"
         height="435"
         :src="blok.image.filename"
@@ -42,8 +42,12 @@ const formattedLink = computed(() => {
       />
     </div>
     <div class="pt-3 pt-4">
-      <p class="mb-1 text-2xl font-semibold leading-none text-white/90">{{ blok.title }}</p>
-      <p class="text-white/90">{{ blok.short_description }}</p>
+      <p
+        class="mb-1 text-2xl font-semibold leading-none text-white/90 transition-colors duration-300 group-hover:text-white"
+      >
+        {{ blok.title }}
+      </p>
+      <p class="text-white/90 transition-colors duration-300 group-hover:text-white">{{ blok.short_description }}</p>
     </div>
     <button class="absolute inset-0 cursor-pointer" @click="openModal" type="button">
       <span class="sr-only">Learn more about {{ blok.title }} project</span>
