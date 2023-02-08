@@ -25,9 +25,6 @@ const heroText = computed(() => renderRichText(props.blok.text));
             class="h-[90px] w-[90px] rounded-full border-[5px] border-solid border-white/90 sm:h-[105px] sm:w-[105px]"
             :src="blok.photo.filename"
             width="190"
-            height="190"
-            provider="storyblok"
-            :modifiers="{ smart: true }"
             :alt="blok.photo.alt"
             :placeholder="[20, 20, 25]"
           />

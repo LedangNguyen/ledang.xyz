@@ -33,12 +33,10 @@ const formattedLink = computed(() => {
     <div>
       <nuxt-img
         class="w-full rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
-        width="580"
-        height="435"
         :src="blok.image.filename"
-        provider="storyblok"
+        width="580"
         :alt="blok.image.alt"
-        :placeholder="[20, 15, 25]"
+        loading="lazy"
       />
     </div>
     <div class="pt-3 pt-4">
@@ -59,10 +57,8 @@ const formattedLink = computed(() => {
       <div class="aspect-w-4 aspect-h-3">
         <nuxt-img
           class="w-full rounded-xl"
-          width="1532"
-          height="1148"
           :src="blok.image.filename"
-          provider="storyblok"
+          width="1532"
           :alt="blok.image.alt"
           :placeholder="[20, 15, 25]"
         />
