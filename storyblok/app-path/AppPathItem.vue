@@ -42,22 +42,6 @@ function distanceBetweenDates(start: string, end: string, now: boolean) {
     <div class="leading-relaxed" v-html="description"></div>
     <span
       class="absolute left-[-48px] top-[10px] block h-[15px] w-[15px] rounded-full border-2 border-solid border-white bg-white"
-      :class="{ last: $attrs.last }"
     ></span>
   </article>
 </template>
-
-<style scoped>
-@keyframes pulse {
-  0% {
-    background-color: rgb(255 255 255 / 100);
-  }
-  100% {
-    background-color: rgb(30 41 59 / 100);
-  }
-}
-
-.last {
-  animation: pulse 1s infinite alternate;
-}
-</style>

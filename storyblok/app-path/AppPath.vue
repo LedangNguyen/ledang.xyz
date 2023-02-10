@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { SbBlokData } from "@storyblok/js";
 
-const props = defineProps<{
+defineProps<{
   blok: {
     heading: string;
     items: SbBlokData[];
   };
 }>();
-
-const lastItem = computed(() => props.blok.items[props.blok.items.length - 1]);
 </script>
 
 <template>
@@ -18,13 +16,7 @@ const lastItem = computed(() => props.blok.items[props.blok.items.length - 1]);
       <div
         class="relative grid gap-8 pl-10 after:absolute after:top-2.5 after:right-full after:isolate after:z-[-1] after:h-[calc(100%-10px)] after:border-l after:border-dashed after:border-white/50"
       >
-        <StoryblokComponent
-          v-if="blok.items"
-          v-for="item in blok.items"
-          :key="item._uid"
-          :blok="item"
-          :last="item === lastItem"
-        />
+        <StoryblokComponent v-if="blok.items" v-for="item in blok.items" :key="item._uid" :blok="item" />
       </div>
     </div>
   </section>
