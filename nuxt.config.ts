@@ -41,7 +41,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Meet Le Dang Nguyen, a highly skilled Full Stack Developer with over eight years of development experience. Expertise in WordPress, Vue.js, Nuxt.js, and Laravel. A responsible and passionate professional ready to tackle challenging projects and contribute to team success.",
+            "Meet Le Dang Nguyen, a highly skilled Full Stack Engineer with over eight years of development experience. Expertise in WordPress, Vue.js, Nuxt.js, and Laravel. A responsible and passionate professional ready to tackle challenging projects and contribute to team success.",
         },
         {
           property: "og:image",
