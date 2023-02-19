@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
     "@nuxt/image-edge",
     "@nuxtjs/html-validator",
+    "nuxt-simple-sitemap",
   ],
   plugins: ["~/plugins/vercel.client.ts"],
   runtimeConfig: {
@@ -65,5 +66,14 @@ export default defineNuxtConfig({
   },
   htmlValidator: {
     logLevel: "warning",
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+    },
+  },
+  sitemap: {
+    hostname: "https://ledang.xyz",
   },
 });
