@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/html-validator",
     "nuxt-simple-sitemap",
+    "@nuxtjs/robots",
   ],
   plugins: ["~/plugins/vercel.client.ts"],
   runtimeConfig: {
