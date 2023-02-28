@@ -68,12 +68,6 @@ export default defineNuxtConfig({
   htmlValidator: {
     logLevel: "warning",
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ["/"],
-    },
-  },
   sitemap: {
     hostname: "https://ledang.xyz",
   },
