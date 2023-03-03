@@ -4,6 +4,7 @@ const props = defineProps<{
   url?: string;
   email?: string;
   target?: string;
+  icon?: string;
 }>();
 
 const href = computed(() => {
@@ -15,9 +16,11 @@ const href = computed(() => {
 
 <template>
   <a
-    class="text-lg font-medium text-white/90 transition-all duration-300 hover:text-white hover:underline hover:underline-offset-4"
+    class="inline-flex items-center gap-1.5 text-lg font-medium text-white/90 transition-all duration-300 hover:text-white hover:underline hover:underline-offset-4"
     :href="href"
     :target="target"
-    >{{ title }}</a
   >
+    <IconCSS v-if="icon" class="text-xl" :name="icon" />
+    <span>{{ title }}</span>
+  </a>
 </template>

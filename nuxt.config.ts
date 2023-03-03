@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxtjs/html-validator",
     "nuxt-simple-sitemap",
     "@nuxtjs/robots",
+    "nuxt-icon",
   ],
   plugins: ["~/plugins/vercel.client.ts"],
   runtimeConfig: {

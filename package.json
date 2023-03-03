@@ -25,6 +25,7 @@
     "eslint": "^8.22.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "nuxt": "^3.2.3",
+    "nuxt-icon": "^0.3.2",
     "nuxt-simple-sitemap": "^1.0.7",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
