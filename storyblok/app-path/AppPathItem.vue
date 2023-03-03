@@ -32,7 +32,7 @@ function distanceBetweenDates(start: string, end: string, now: boolean) {
 
 <template>
   <article class="relative text-white/90" v-editable="blok">
-    <p class="text-2xl font-medium">{{ blok.title }}</p>
+    <h3 class="text-2xl font-medium">{{ blok.title }}</h3>
     <p class="mb-2 text-lg">{{ blok.subtitle }}</p>
     <p class="mb-2.5 text-white/70">
       {{ formatDate(blok.start_date, false) }} - {{ formatDate(blok.end_date, blok.end_date_present) }} ({{

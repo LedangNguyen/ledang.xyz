@@ -40,11 +40,11 @@ const formattedLink = computed(() => {
       />
     </div>
     <div class="pt-3 pt-4">
-      <p
+      <h3
         class="mb-1 text-2xl font-semibold leading-none text-white/90 transition-colors duration-300 group-hover:text-white"
       >
         {{ blok.title }}
-      </p>
+      </h3>
       <p class="text-white/90 transition-colors duration-300 group-hover:text-white">{{ blok.short_description }}</p>
     </div>
     <button class="absolute inset-0 cursor-pointer" @click="openModal" type="button">

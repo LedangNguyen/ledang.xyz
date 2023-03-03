@@ -10,10 +10,8 @@ const modal = ref(null);
 
 onClickOutside(modal, props.closeModal);
 
-const isOpen = computed(() => props.isModalOpen);
-
-watch(isOpen, (isOpen) => {
-  document.body.classList.toggle("overflow-hidden", isOpen);
+onUpdated(() => {
+  document.body.classList.toggle("overflow-hidden", props.isModalOpen);
 });
 </script>
 
@@ -21,8 +19,8 @@ watch(isOpen, (isOpen) => {
   <Teleport to="body">
     <Transition name="modal">
       <div
-        v-if="isOpen"
-        class="scrollbar-hide fixed top-1/2 left-1/2 z-30 grid h-full w-full max-w-screen-sm -translate-y-1/2 -translate-x-1/2 overflow-auto"
+        v-if="isModalOpen"
+        class="scrollbar-hide fixed top-0 left-1/2 z-30 grid h-full w-full max-w-screen-sm -translate-x-1/2 overflow-auto"
       >
         <div class="relative my-auto p-5 pt-12" ref="modal">
           <slot />
@@ -39,7 +37,7 @@ watch(isOpen, (isOpen) => {
       </div>
     </Transition>
     <Transition name="overlay">
-      <div v-if="isOpen" class="fixed inset-0 z-20 backdrop-blur-lg"></div>
+      <div v-if="isModalOpen" class="fixed top-0 left-0 z-20 h-full w-full backdrop-blur-lg"></div>
     </Transition>
   </Teleport>
 </template>

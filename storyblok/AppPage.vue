@@ -26,7 +26,7 @@ watch(scrollSection, (section) => {
 </script>
 
 <template>
-  <div>
+  <main>
     <StoryblokComponent
       v-if="blok"
       v-for="component in blok.body"
@@ -34,5 +34,5 @@ watch(scrollSection, (section) => {
       :blok="component"
       :ref="refs.set"
     />
-  </div>
+  </main>
 </template>
