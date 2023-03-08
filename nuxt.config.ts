@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      title: "Le Dang Nguyen | Expertise in WordPress, Vue.js, Nuxt.js, Laravel",
+      title: process.env.META_TITLE,
       link: [
         {
           rel: "canonical",
@@ -43,8 +43,15 @@ export default defineNuxtConfig({
       meta: [
         {
           name: "description",
-          content:
-            "Meet Le Dang Nguyen, a highly skilled Full Stack Engineer with over eight years of development experience. Expertise in WordPress, Vue.js, Nuxt.js, and Laravel. A responsible and passionate professional ready to tackle challenging projects and contribute to team success.",
+          content: process.env.META_DESCRIPTION,
+        },
+        {
+          property: "og:title",
+          content: process.env.META_TITLE,
+        },
+        {
+          property: "og:description",
+          content: process.env.META_DESCRIPTION,
         },
         {
           property: "og:image",
