@@ -21,12 +21,16 @@ function distanceBetweenDates(start: string, end: string, now: boolean) {
   const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
   const months = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
 
+  if (years === 0 && months === 0) return "";
+
   const yearsText = years === 1 ? "year" : "years";
   const monthsText = months === 1 ? "month" : "months";
 
-  if (years === 0) return `${months} ${monthsText}`;
+  if (years === 0) return `(${months} ${monthsText})`;
 
-  return `${years} ${yearsText} ${months} ${monthsText}`;
+  if (months === 0) return `(${years} ${yearsText})`;
+
+  return `(${years} ${yearsText} ${months} ${monthsText})`;
 }
 </script>
 
@@ -35,9 +39,8 @@ function distanceBetweenDates(start: string, end: string, now: boolean) {
     <h3 class="text-2xl font-medium">{{ blok.title }}</h3>
     <p class="mb-2 text-lg">{{ blok.subtitle }}</p>
     <p class="mb-2.5 text-white/70">
-      {{ formatDate(blok.start_date, false) }} - {{ formatDate(blok.end_date, blok.end_date_present) }} ({{
-        distanceBetweenDates(blok.start_date, blok.end_date, blok.end_date_present)
-      }})
+      {{ formatDate(blok.start_date, false) }} - {{ formatDate(blok.end_date, blok.end_date_present) }}
+      {{ distanceBetweenDates(blok.start_date, blok.end_date, blok.end_date_present) }}
     </p>
     <div class="leading-relaxed" v-html="description"></div>
     <span
