@@ -76,7 +76,7 @@ export default defineNuxtConfig({
   htmlValidator: {
     logLevel: "warning",
   },
-  sitemap: {
-    hostname: "https://ledang.xyz",
+  site: {
+    url: "https://ledang.xyz",
   },
 });
