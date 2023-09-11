@@ -8,8 +8,8 @@
     "postinstall": "nuxt prepare",
     "lint:js": "eslint --ext \".js,.ts,.vue\" .",
     "lint:prettier": "prettier --check .",
-    "lint": "pnpm run lint:js && pnpm run lint:prettier",
-    "lintfix": "prettier --write --list-different . && pnpm run lint:js --fix",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
     "cert": " mkcert localhost",
     "typecheck": "nuxi typecheck"
   },
